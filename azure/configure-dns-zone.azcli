@@ -1,0 +1,26 @@
+#!/bin/bash
+
+az account list -o table
+
+echo 'Please provide the subscription id for Azure DNS configuration: '
+read AZ_SUBSCRIPTION_ID
+
+az account set --subscription $AZ_SUBSCRIPTION_ID
+
+AZ_DNS_RESOURCE_GROUP=tt-conferences
+AZ_DNS_ZONE_NAME=thinktecture-demos.com
+# results in miniapi.thinktecture-demos.com
+SUB_DOMAIN_NAME=miniapi
+
+
+# grab the public ip
+# kubectlget svc -n namespace-of-your-ingress-controller
+
+echo 'Please provide the public IP address of your Ingress Service: '
+read INGRESS_SERVICE_PUBLIC_IP
+
+# create a DNS Zone
+az network dns zone create -g $AZ_DNS_RESOURCE_GROUP -n $AZ_DNS_ZONE_NAME
+
+# create an A record for the subdomain
+az network dns record-set a add-record -g $AZ_DNS_RESOURCE_GROUP -z $AZ_DNS_ZONE_NAME -n $SUB_DOMAIN_NAME -a $INGRESS_SERVICE_PUBLIC_IP

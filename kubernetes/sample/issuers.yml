@@ -1,0 +1,31 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-staging
+  namespace: mini-api
+spec:
+  acme:
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    email: yourname@email.com
+    privateKeySecretRef:
+      name: account-key-staging
+    solvers:
+    - http01:
+       ingress:
+         class: nginx
+---
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-prod
+  namespace: mini-api
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: yourname@email.com
+    privateKeySecretRef:
+      name: account-key-prod
+    solvers:
+    - http01:
+       ingress:
+         class: nginx

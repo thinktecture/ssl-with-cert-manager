@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.MiniAPI", "Thinktecture.MiniAPI.csproj", "{970DF3B6-2A2D-4733-BE1B-79173318ADC0}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{27C5A3A5-D200-473D-A65D-F21BA63220B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{970DF3B6-2A2D-4733-BE1B-79173318ADC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{970DF3B6-2A2D-4733-BE1B-79173318ADC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{970DF3B6-2A2D-4733-BE1B-79173318ADC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{970DF3B6-2A2D-4733-BE1B-79173318ADC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27C5A3A5-D200-473D-A65D-F21BA63220B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27C5A3A5-D200-473D-A65D-F21BA63220B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27C5A3A5-D200-473D-A65D-F21BA63220B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27C5A3A5-D200-473D-A65D-F21BA63220B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A95B215-C5F6-40EC-B9F2-51F9EFA9409C}
+	EndGlobalSection
+EndGlobal
